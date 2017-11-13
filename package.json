@@ -37,6 +37,7 @@
     "grunt-cli": "1.2.0",
     "grunt-contrib-sass": "*",
     "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "*",
     "ngx-bootstrap": "^1.9.3",
     "rxjs": "^5.4.2",
     "vue-carousel-3d": "^0.1.18",
