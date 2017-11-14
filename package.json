@@ -5,16 +5,16 @@
   "main": "app.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "node app.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot  -prod"
+    "postinstall": "ng build --aot  --target=production"
   },
   "engines": {
-    "node": "~6.10.3",
-    "npm": "~3.10.5"
+    "node": "6.11.3",
+    "npm": "3.10.10"
   },
   "private": true,
   "dependencies": {
@@ -41,7 +41,8 @@
     "ngx-bootstrap": "^1.9.3",
     "rxjs": "^5.4.2",
     "vue-carousel-3d": "^0.1.18",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "typescript": "^2.3.3"
   },
   "devDependencies": {
     "@angular/language-service": "^4.2.4",
@@ -61,6 +62,5 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
-    "typescript": "~2.3.3"
   }
 }
