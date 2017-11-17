@@ -13,7 +13,7 @@ import 'rxjs/add/operator/catch';
 
 import { environment } from '../../../environments/environment';
 import { User } from '../../models/user.model';
-import { ApplicationError } from '../../util/applicationerror.service';
+//import { ApplicationError } from '../../util/applicationerror.service';
 import { UtilService } from '../../util/util.service';
 import { error } from 'util';
 
