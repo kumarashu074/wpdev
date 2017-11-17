@@ -3,14 +3,14 @@ let express = require('express'),
 var app = express();
 let server = require('http').Server(app);
 
-app.use(express.static(path.join(__dirname+'/dist')));
+app.use(express.static(path.join('/dist')));
 
 app.get('/', function(req, res, next){
-   res.sendFile(path.join(__dirname+"/index.html"));
+   res.sendFile(path.join("/index.html"));
 });
 
 app.get('/index.html', function(req, res,next){
-    res.sendFile(path.join(__dirname+"/dist/index.html"));
+    res.sendFile(path.join("/dist/index.html"));
 });
 
 var webapp = app.listen(process.env.PORT || 8080, function () {
