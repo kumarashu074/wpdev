@@ -3,7 +3,7 @@ let express = require('express'),
 var app = express();
 let server = require('http').Server(app);
 
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname+'/dist')));
 
 app.get('/', function(req, res, next){
    res.sendFile(path.join(__dirname+"/index.html"));
