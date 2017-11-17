@@ -3,7 +3,7 @@ let express = require('express'),
 var app = express();
 let server = require('http').Server(app);
 
-app.use(express.static(path.join('/dist')));
+app.use(express.static(path.join('../dist')));
 
 app.get('*', function (req, res) {
   const index = path.join(__dirname, 'dist', 'index.html');
