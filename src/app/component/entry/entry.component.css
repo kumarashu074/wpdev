@@ -170,9 +170,9 @@ body {
      }
   
   
-  #section6 {text-align:center; margin-top:0px; padding-top:0px;height:500px;color: #fff;
+  #section6 {text-align:center; margin-top:0px; margin-top:50px;margin-bottom:50px;height:500px;color: #000;
 /*   background-image: url("../../../assets/images/gosocialbackimage.png"); */
-background-color: #cacaca;
+background-color: #cfced0;
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -183,7 +183,7 @@ background-color: #cacaca;
     overflow:hidden;
     width:100%;
     postion:relative;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   #section7 {text-align:center; margin-top:0px; padding-top:0px;height:500px;color: #fff; 
   background-image: url("../../../assets/images/cover7bw.jpg");
@@ -207,7 +207,7 @@ background-color: #cacaca;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
 
@@ -248,20 +248,33 @@ background-color: #cacaca;
 }
 
 .img2 {
-   width: 70px;
-   height: 70px;
+   width: 190px;
+   height: 90px;
+   font: 800 26px/0.9 'Shadows Into Light', sans-serif;
+   background:transparent;
+   
 }
 
 .img3 {
-   width: 90px;
+   width: 190px;
    height: 90px;
+    font: 800 26px/0.9 'Shadows Into Light', sans-serif;
 }
 
 .img4 {
-   width: 70px;
-   height: 70px;
+   width: 150px;
+   height: 90px;
+    font: 800 26px/0.9 'Shadows Into Light', sans-serif;
 }
 
+.img5 {
+   width: 331px;
+   height: 625px;
+   font: 800 25px/0.9 'Shadows Into Light', sans-serif;
+   background:transparent;
+   margin-top:-100px;
+   
+}
 
 h3 {
   font: 400 13px/0.8 'Great Vibes', Helvetica, sans-serif;
@@ -439,6 +452,7 @@ General Styles for slider section#4
   color: #fafafa;
   font-size: 24px;
   border-radius: 0%;
+  width:100%;
 }
 
 .imgoverlaysec4:hover {
@@ -528,7 +542,7 @@ Home Slider
 }
 
 .swiper-image-one {
-  background-image: url("../../../assets/images/section2PicLeft1.png");
+  background-image: url("../../../assets/images/sec2ProPhotos.jpg");
 }
 
 .swiper-image-two {
@@ -3486,8 +3500,9 @@ to {
 }
 
 .emphasisSEC2btn {
-	font-size: 35px;
+	font-size: 40px;
 	font-family: 'Indie Flower', cursive;
+	font-weight:bolder;
 	text-decoration: none;
 }
 
