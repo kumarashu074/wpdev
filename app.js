@@ -1,12 +1,14 @@
-let express = require('express'),
-    path = require('path');
+let express = require('express');
 var app = express();
 let server = require('http').Server(app);
 
-app.use(express.static(path.join('../dist')));
+var path = require('path');
+var rootPath = path.normalize(__dirname + '/');
+app.use(express.static(rootPath + '/dist'));
+
 
 app.get('*', function (req, res) {
-  const index = path.join(__dirname, 'dist', 'index.html');
+  const index = path.join(__dirname, 'index.html');
   res.sendFile(index);
 });
 
