@@ -6,14 +6,14 @@ let server = require('http').Server(app);
 app.use(express.static(path.join(__dirname)));
 
 app.get('/', function(req, res, next){
-    res.sendStatus(200);
+    res.sendStares.sendFile(path.join(__dirname+"/index.html"));
 });
 
-app.get('/blog.html', function(req, res,next){
-    res.sendFile(path.join(__dirname+"/blog.html"));
+app.get('/dist/index.html', function(req, res,next){
+    res.sendFile(path.join(__dirname+"/index.html"));
 });
 
-app.post('/contact', function(req, res, next){
+app.post('/login', function(req, res, next){
 
 });
 server.listen(process.env.PORT || 8000, function() {
