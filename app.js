@@ -5,12 +5,12 @@ var path = require('path');
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(path.join(__dirname, 'dist/')));
-console.log("path******************: ", path.join(__dirname, 'dist/'));
+app.use(express.static(path.join(__dirname, 'hdist/')));
+console.log("path******************: ", path.join(__dirname, 'hdist/'));
 
 
 app.get('/', function(req, res, next){
-    res.sendFile(path.join(__dirname,'../dist/index.html'));
+    res.sendFile(path.join(__dirname,'../hdist/index.html'));
 });
 
 //app.get('*', function (req, res) {
