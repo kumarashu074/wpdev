@@ -10,7 +10,7 @@ console.log("path******************: ", path.join(__dirname, 'dist/'));
 
 
 app.get('/', function(req, res, next){
-    res.send('index.html');
+    res.sendFile('index.html');
 });
 
 //app.get('*', function (req, res) {
