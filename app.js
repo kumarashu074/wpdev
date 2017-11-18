@@ -2,13 +2,13 @@ let express = require('express');
 var app = express();
 let server = require('http').Server(app);
 
+
 var path = require('path');
 var rootPath = path.normalize(__dirname + '/');
 app.use(express.static(rootPath + '/dist'));
 
-
 app.get('*', function (req, res) {
-  const index = path.join(__dirname,'../../dist', 'index.html');
+  const index = path.join(__dirname,'/dist/index.html');
   res.sendFile(index);
 });
 
