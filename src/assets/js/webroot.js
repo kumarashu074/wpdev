@@ -58,7 +58,7 @@ jQuery(document).ready(function() {
 				]
 		},
 		mounted: function () {
-			
+			console.log("mounting");
 			console.log($('#app').is(':visible'));
 			if($('#app').is(':visible')) { //if the container is visible on the page
 				 
@@ -85,6 +85,7 @@ jQuery(document).ready(function() {
 		},
 		methods: {
 			updateSlide: function (index) {
+				console.log("move to other slide");	
 				index < this.currentSlide ? this.isPreviousSlide = true : this.isPreviousSlide = false;
 				this.currentSlide = index;
 				this.isFirstLoad = false;
