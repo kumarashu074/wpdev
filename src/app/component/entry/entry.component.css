@@ -98,7 +98,6 @@ body {
 	-o-background-size:cover;
 	background-size:cover;
 	height: 100%;  
-    position: fixed;
     width: 100%;
 }
 
