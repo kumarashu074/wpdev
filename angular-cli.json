@@ -27,7 +27,6 @@
       "scripts": [
 	"assets/js/bootstrap.min.js", 
         "assets/js/jquery.vmap.min.js",
-	"assets/js/vue.min.js",
 	"assets/js/swiper.min.js",
 	"assets/js/webroot.js"	
 	],

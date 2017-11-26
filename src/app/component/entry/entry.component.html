@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<div id="maindiv">
+<div class="maindiv">
 
 	<a class="back-to-top" style="display: none;" href="#">TOP</a>
 
@@ -405,7 +405,7 @@
 		<!-- class="container" class="container-fluid" -->
 		<!-- 		<p>{{appVar.slides[0].headlineFirstLine}}</p> -->
 		<div class="container container-fuild">
-			<div id="app" class="wrapper" v-cloak
+			<div id="secvue" class="wrapper" v-cloak
 				v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
 				<div class="slide-wrapper" v-for="(slide, index) in slides"
 					v-bind:class="{ active: index === currentSlide }"
@@ -426,7 +426,10 @@
 								<div v-text="slide.headlineFirstLine"></div>
 								<div v-text="slide.headlineSecondLine"></div>
 							</h1>
-							<a class="slide-content-cta">Its for me too!</a>
+							<a class="slide-content-cta2">Its for me too!</a>
+						</div>
+						<div class="slide-content-text-center">
+							<h2 v-text="slide.sideMessage"></h2>
 						</div>
 						<h2 class="slide-side-text">
 							<span>
@@ -438,7 +441,8 @@
 					</div>
 				</div>
 				<div class="controls-container">
-					<button class="controls-button" v-for="(slide, index) in slides"
+					<button class="controls-button" 
+					    v-for="(slide, index) in slides"
 						v-bind:class="{ active: index === currentSlide }"
 						v-on:click="updateSlide(index)">
 						<div v-text="slide.headlineFirstLine"></div>
@@ -446,7 +450,8 @@
 					</button>
 				</div>
 				<div class="pagination-container">
-					<span class="pagination-item" v-for="(slide, index) in slides"
+					<span class="pagination-item" 
+						v-for="(slide, index) in slides"
 						v-bind:class="{ active: index === currentSlide }"
 						v-on:click="updateSlide(index)"></span>
 				</div>
@@ -470,30 +475,106 @@
 						<tr>
 							<td>
 								<div class="sec4imgdiv">
-									<img class="imgdivsec4" style="max-width: 100%; height: auto;"
+									<img class="imgdivsec4"
 										src="assets/images/img1.jpg" />
-									<div class="imgoverlaysec4" style="text-align: center;">
-										<p
-											style="font-size: 14px; margin-top: 30px; text-align: center;">
-											Closing for voting at 12th Nov.<br /> Prize: cash / sponsor
-											product<br /> Top 10 awarded<br /> 1 entry for free<br />
+									<div class="imgoverlaysec4">
+										<p class="imgoverlaysec4P">
+											200F<br /> 
+											500€ min. cash entry<br/>
+											1000€ Awards non cash<br/>
+											Top 10 winners <br/>
+											0.5€ entry <br/>
+											Juri <br/>
 
 										</p>
-										<button class="success" style="font-size: 21px;">see
+										<button class="success">see
 											me inside!</button>
 									</div>
 								</div>
 							</td>
-							<td><img style="max-width: 100%; height: auto;"
-								src="assets/images/005.jpg" /></td>
-							<td><img style="max-width: 100%; height: auto;"
-								src="assets/images/006.jpg" />
 							<td>
+							
+							<div class="sec4imgdiv">
+									<img class="imgdivsec4"
+										src="assets/images/005.jpg" />
+									<div class="imgoverlaysec4">
+										<p class="imgoverlaysec4P">
+											200F<br /> 
+											500€ min. cash entry<br/>
+											1000€ Awards non cash<br/>
+											Top 10 winners <br/>
+											0.5€ entry <br/>
+											Juri <br/>
+
+										</p>
+										<button class="success">see
+											me inside!</button>
+									</div>
+								</div>
+								
+							</td>
 							<td>
-							<td><img style="max-width: 100%; height: auto;"
-								src="assets/images/007.jpg" /></td>
-							<td><img style="max-width: 100%; height: auto;"
-								src="assets/images/008.jpg" /></td>
+							
+							<div class="sec4imgdiv">
+								<img class="imgdivsec4"
+										src="assets/images/006.jpg" />
+							
+									<div class="imgoverlaysec4">
+										<p class="imgoverlaysec4P">
+											200F<br /> 
+											500€ min. cash entry<br/>
+											1000€ Awards non cash<br/>
+											Top 10 winners <br/>
+											0.5€ entry <br/>
+											Juri <br/>
+
+										</p>
+										<button class="success">see
+											me inside!</button>
+									</div>
+								</div>
+								
+							</td>
+						
+							<td>
+							<div class="sec4imgdiv">
+									<img class="imgdivsec4"
+										src="assets/images/007.jpg" />
+									<div class="imgoverlaysec4">
+										<p class="imgoverlaysec4P">
+											200F<br /> 
+											500€ min. cash entry<br/>
+											1000€ Awards non cash<br/>
+											Top 10 winners <br/>
+											0.5€ entry <br/>
+											Juri <br/>
+
+										</p>
+										<button class="success">see
+											me inside!</button>
+									</div>
+								</div>
+								
+							</td>
+							<td>
+								<div class="sec4imgdiv">
+									<img class="imgdivsec4" 
+										src="assets/images/008.jpg" />
+									<div class="imgoverlaysec4">
+										<p class="imgoverlaysec4P">
+											200F<br /> 
+											500€ min. cash entry<br/>
+											1000€ Awards non cash<br/>
+											Top 10 winners <br/>
+											0.5€ entry <br/>
+											Juri <br/>
+
+										</p>
+										<button class="success">see
+											me inside!</button>
+									</div>
+								</div>
+								</td>
 						</tr>
 					</tbody>
 				</table>
@@ -517,7 +598,9 @@
 
 					<div style="margin: 0 auto !important; display: inline-block;">
 						<p class="img2 img-responsive center-block"
-							style="margin-top: 30%;">+ 100 contests / week</p>
+							style="margin-top: 30%;">
+							+ 100 contests / week
+						</p>
 
 						<p class="img3 img-responsive center-block">+ 100K Total value
 							prizes / week</p>
@@ -540,7 +623,7 @@
 
 	<div id="section6">
 		<h2
-				style="text-align: center; font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;color: black">
+				style="text-align: center; font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;color: white">
 				... Go <span class="emphasis">social</span> see what they say about us!
 			</h2>
 		
@@ -592,54 +675,54 @@
 			</div>
 		</div>
 	</div>
-	<div id="section7">
-		<h2
-				style="text-align: center; font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;">
-			<span class="emphasisSEC7">...</span> You will <span
-				class="emphasisSEC7">learn</span>, <span class="emphasisSEC7">share</span>,
-			<span class="emphasisSEC7">invite</span>, <span class="emphasisSEC7">enjoy</span>
-			and <span class="emphasisSEC7">feel</span> it. <span
-				class="emphasisSEC7">Win</span>, <span class="emphasisSEC7">follow</span>,
-			<span class="emphasisSEC7">travel</span> and much more!
-			</h2>
-		<p class="sec7msg258">
-			<span class="glyphicon glyphicon-thumbs-up"></span><span
-				class="emphasisSEC7"> Learn</span> how to improve.
-		</p>
-		<p class="sec7msg36">
-			<span class="glyphicon glyphicon-thumbs-up"></span><span
-				class="emphasisSEC7"> Share</span> your know how with your
-			photographic shots, blog, events and trips.
-		</p>
-		<p class="sec7msg47">
-			<span class="glyphicon glyphicon-thumbs-up"></span><span
-				class="emphasisSEC7"> Invite</span> everybody to enjoy your photos
-			and all you have to offer on this matter.
-		</p>
-		<p class="sec7msg258">
-			<span class="glyphicon glyphicon-thumbs-up"></span><span
-				class="emphasisSEC7"> Enjoy</span> the way you can just use your
-			photos to express your self and let others do the same in a many
-			different ways.
-		</p>
-		<p class="sec7msg36">
-			<span class="glyphicon glyphicon-thumbs-up"></span><span
-				class="emphasisSEC7"> Win</span> prizes, knowledge, awareness of
-			your self and the world and let your mind become a winner each day.
-		</p>
-		<p class="sec7msg47">
-			<span class="glyphicon glyphicon-thumbs-up"></span><span
-				class="emphasisSEC7"> Follow</span> the greatest and your favorites,
-			photographers, photos, contests, events, trips and more
-		</p>
-		<p class="sec7msg258">
-			<span class="glyphicon glyphicon-thumbs-up"></span><span
-				class="emphasisSEC7"> Travel</span> to where ? Yes to the right
-			place on planet earth where your favorite shots have been taken,
-			that's it! here you will find the right itineraries and all you need
-			to book them for your next trip!
-		</p>
-	</div>
+<!-- 	<div id="section7"> -->
+<!-- 		<h2 -->
+<!-- 				style="text-align: center; font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;"> -->
+<!-- 			<span class="emphasisSEC7">...</span> You will <span -->
+<!-- 				class="emphasisSEC7">learn</span>, <span class="emphasisSEC7">share</span>, -->
+<!-- 			<span class="emphasisSEC7">invite</span>, <span class="emphasisSEC7">enjoy</span> -->
+<!-- 			and <span class="emphasisSEC7">feel</span> it. <span -->
+<!-- 				class="emphasisSEC7">Win</span>, <span class="emphasisSEC7">follow</span>, -->
+<!-- 			<span class="emphasisSEC7">travel</span> and much more! -->
+<!-- 			</h2> -->
+<!-- 		<p class="sec7msg258"> -->
+<!-- 			<span class="glyphicon glyphicon-thumbs-up"></span><span -->
+<!-- 				class="emphasisSEC7"> Learn</span> how to improve. -->
+<!-- 		</p> -->
+<!-- 		<p class="sec7msg36"> -->
+<!-- 			<span class="glyphicon glyphicon-thumbs-up"></span><span -->
+<!-- 				class="emphasisSEC7"> Share</span> your know how with your -->
+<!-- 			photographic shots, blog, events and trips. -->
+<!-- 		</p> -->
+<!-- 		<p class="sec7msg47"> -->
+<!-- 			<span class="glyphicon glyphicon-thumbs-up"></span><span -->
+<!-- 				class="emphasisSEC7"> Invite</span> everybody to enjoy your photos -->
+<!-- 			and all you have to offer on this matter. -->
+<!-- 		</p> -->
+<!-- 		<p class="sec7msg258"> -->
+<!-- 			<span class="glyphicon glyphicon-thumbs-up"></span><span -->
+<!-- 				class="emphasisSEC7"> Enjoy</span> the way you can just use your -->
+<!-- 			photos to express your self and let others do the same in a many -->
+<!-- 			different ways. -->
+<!-- 		</p> -->
+<!-- 		<p class="sec7msg36"> -->
+<!-- 			<span class="glyphicon glyphicon-thumbs-up"></span><span -->
+<!-- 				class="emphasisSEC7"> Win</span> prizes, knowledge, awareness of -->
+<!-- 			your self and the world and let your mind become a winner each day. -->
+<!-- 		</p> -->
+<!-- 		<p class="sec7msg47"> -->
+<!-- 			<span class="glyphicon glyphicon-thumbs-up"></span><span -->
+<!-- 				class="emphasisSEC7"> Follow</span> the greatest and your favorites, -->
+<!-- 			photographers, photos, contests, events, trips and more -->
+<!-- 		</p> -->
+<!-- 		<p class="sec7msg258"> -->
+<!-- 			<span class="glyphicon glyphicon-thumbs-up"></span><span -->
+<!-- 				class="emphasisSEC7"> Travel</span> to where ? Yes to the right -->
+<!-- 			place on planet earth where your favorite shots have been taken, -->
+<!-- 			that's it! here you will find the right itineraries and all you need -->
+<!-- 			to book them for your next trip! -->
+<!-- 		</p> -->
+<!-- 	</div> -->
 	<div id="section8">
 	<h2
 				style="text-align: center; font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;">

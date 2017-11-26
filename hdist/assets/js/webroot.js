@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 
 
 	var appVue = new Vue({
-		el: '#app',
+		el: '#secvue',
 		data: {
 			currentSlide: 0,
 			isPreviousSlide: false,
@@ -36,33 +36,36 @@ jQuery(document).ready(function() {
 					headlineSecondLine: "KIDS",
 					sublineFirstLine: "For Your",
 					sublineSecondLine: "KIDS",
-					bgImg: "https://s27.postimg.org/iz6qk21wz/slide0.jpg",
-					rectImg: "https://s27.postimg.org/rgouhim83/slide_rect0.jpg"
+					sideMessage:"Let your kids enjoy the power of taking photos by playing around on our 4KIDS contests!",
+					bgImg: "assets/images/kidsTakingPhoto.jpg",
+					rectImg: "assets/images/kidsTakingPhotoBack.jpg"
 				},
 				{
 					headlineFirstLine: "The",
 					headlineSecondLine: "GRANDS",
 					sublineFirstLine: "For The",
 					sublineSecondLine: "GRANDS",
-					bgImg: "https://s24.postimg.org/3xfyl0zat/slide1.jpg",
-					rectImg: "https://s27.postimg.org/r00xg9gib/slide_rect1.jpg"
+					sideMessage:"Let your older ones have a hobby and also having fun shooting, sharing their photos and finding their next trips!",
+					bgImg: "assets/images/oldersTakingPhoto.jpg",
+					rectImg: "assets/images/oldersTakingPhotoBack.jpg"
 				},
 				{
 					headlineFirstLine: "And...",
 					headlineSecondLine: "EVERYONE",
 					sublineFirstLine: "",
 					sublineSecondLine: "EVERYONE",
-					bgImg: "https://s29.postimg.org/80bb1536f/slide2.jpg",
-					rectImg: "https://s28.postimg.org/a2i6ateul/slide_rect2.jpg"
+					sideMessage:"Just to all of you! Enjoy and realize your dreams when it came to be memorable!",
+					bgImg: "assets/images/everyoneTakingPhoto.jpg",
+					rectImg: "assets/images/everyoneTakingPhotoBack.jpg"
 				}
 				]
 		},
 		mounted: function () {
-			console.log("mounting");
-			console.log($('#app').is(':visible'));
-			if($('#app').is(':visible')) { //if the container is visible on the page
+			
+			console.log($('#secvue').is(':visible'));
+			if($('#secvue').is(':visible')) { //if the container is visible on the page
 				 
-			var productRotatorSlide = document.getElementById("app");
+			var productRotatorSlide = document.getElementById("secvue");
 			console.log('productRotatorSlide: '+productRotatorSlide);
 			var startX = 0;
 			var endX = 0;
@@ -88,7 +91,7 @@ jQuery(document).ready(function() {
 				console.log("move to other slide");	
 				index < this.currentSlide ? this.isPreviousSlide = true : this.isPreviousSlide = false;
 				this.currentSlide = index;
-				this.isFirstLoad = false;
+				this.isFirstLoad = false; 
 			}
 		}
 	});
@@ -105,21 +108,6 @@ var mySwiper = new Swiper(".swiper-container", {
 	autoplay: true,
 	effect: "slide",
 	mousewheelControl: 1
-});
-
-
-var swiper = new Swiper('.swiper-container4', { 
-	slidesPerView: 3, 
-	centeredSlides: true, 
-	spaceBetween: 30, 
-	pagination: { 
-		el: '.swiper-pagination', 
-		clickable: true, 
-	}, 
-	navigation: { 
-		nextEl: '.swiper-button-next', 
-		prevEl: '.swiper-button-prev', 
-	}, 
 });
 
 function setIntervalX(callback, delay, repetitions) {
