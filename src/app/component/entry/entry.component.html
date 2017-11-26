@@ -404,8 +404,8 @@
 	<div id="section3">
 		<!-- class="container" class="container-fluid" -->
 		<!-- 		<p>{{appVar.slides[0].headlineFirstLine}}</p> -->
-		<div class="container container-fuild">
-			<div id="secvue" class="wrapper" v-cloak
+		<div id="secvue" class="container container-fuild">
+			<div class="wrapper" v-cloak
 				v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
 				<div class="slide-wrapper" v-for="(slide, index) in slides"
 					v-bind:class="{ active: index === currentSlide }"
@@ -766,25 +766,25 @@
 				</button>
 				<a class="navbar-brand" href="#"> <img alt=""
 					src="assets/images/winpilogo2.png"
-					style="width: 25px; hright: 20px;">
+					style="width: 55px; height: 40px;    margin-top: -10px;">
 				</a>
 			</div>
 			<div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a [routerLink]="['/contestList']">Contests</a></li>
-						<li><a [routerLink]="['/photoList']">Photos</a></li>
-						<li><a [routerLink]="['/vote']">Vote</a></li>
+						<li><a [routerLink]="['/contestList']" class="navbarLinks">CONTESTS</a></li>
+						<li><a [routerLink]="['/photoList']" class="navbarLinks">PHOTOS</a></li>
+						<li><a [routerLink]="['/vote']" class="navbarLinks">VOTE</a></li>
 						<li class="dropup"><a class="dropup-toggle"
-							data-toggle="dropdown" href="#">How <span class="caret"></span></a>
+							data-toggle="dropdown" href="#" class="navbarLinks">HOW <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a [routerLink]="['/support']">it works</a></li>
-								<li><a [routerLink]="['/start']">to start</a></li>
+								<li><a [routerLink]="['/support']" class="navbarLinks">IT WORKS</a></li>
+								<li><a [routerLink]="['/start']" class="navbarLinks">TO START</a></li>
 							</ul></li>
 					</ul>
 					<ul class="nav navbar-nav pull-right">
-						<li><a [routerLink]="['/login']">Login</a></li>
-						<li><a [routerLink]="['/register']"> Sign Up</a></li>
+						<li><a [routerLink]="['/login']" class="navbarLinks">LOGIN</a></li>
+						<li><a [routerLink]="['/register']" class="navbarLinks">SIGN UP</a></li>
 					</ul>
 				</div>
 			</div>
