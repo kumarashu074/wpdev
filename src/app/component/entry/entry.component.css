@@ -100,7 +100,7 @@ body {
 	height: 100%;  
     width: 100%;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 460px) {
 	.maindiv {
 	background-image:none;
 	background-color:#070f02;
@@ -208,7 +208,7 @@ body {
     overflow:hidden;
     width:100%;
     postion:relative;
-    opacity: 0.5;
+    opacity: 1;
   }
   #section7 {text-align:center; margin-top:0px; padding-top:0px;height:500px;color: #fff; 
   background-image: url("../../../assets/images/cover7bw.jpg");
@@ -3063,7 +3063,7 @@ to {
 }
 
 .imgsec6 {
-  opacity: 0.8;
+  opacity: 1;
   transition: opacity 0.25s;
   z-index: 1;
   background-color: rgba(46,204,113,0.6);
