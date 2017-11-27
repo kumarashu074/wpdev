@@ -116,7 +116,7 @@ body {
 }
 }
 
-  #section1 {text-align:center;  height:500px;padding-top:50px;
+  #section1 {text-align:center;  height:500px;padding-top:10px;
   	color: #fff; 
 /*     background-image: url("../../../assets/images/cover1.jpg"); */
 /* 	background-color:#ffffff; */
@@ -127,6 +127,8 @@ body {
     background-size: cover;
     font-family: 'Indie Flower', cursive;
     opacity: 0.8;
+    margin-right: 10px;
+    margin-left: 10px;
 
   }
   #section2 {text-align:center;  padding-top:0px;color: #fff;
@@ -139,12 +141,13 @@ body {
     background-size: cover;
      resize: both;
     overflow:hidden;
-    width:100%;
+    margin-right: 10px;
+    margin-left: 10px;
     postion:relative;
     font-family: 'Indie Flower', cursive;
     opacity: 0.8;
 	}
-  #section3 {text-align:center; margin-top:50px; padding-top:0px;height:800px;color: #fff; 
+  #section3 {text-align:center; margin-top:50px; padding-top:0px;height:750px;color: #fff; 
 
 /* 	background-image: url("../../../assets/images/imgbg1.jpg"); */
 /* 	background-color:white; */
@@ -155,13 +158,14 @@ body {
     background-size: cover;
      resize: both;
     overflow:hidden;
-    width:100%;
+    margin-right: 10px;
+    margin-left: 10px;
     postion:relative;
     font-family: 'Indie Flower', cursive;
 /*     opacity: 1; */
     
 	}
-  #section4 {text-align:center; margin-top:0px; padding-top:0px;height:450px;color: #fff; 
+  #section4 {text-align:center; margin-top:50px; padding-top:0px;height:450px;color: #fff; 
 /*   background-image: url("../../../assets/images/imgbg2.jpg"); */
     min-height: 350px;
     background-attachment: fixed;
@@ -170,9 +174,12 @@ body {
     background-size: cover;
     resize: both;
     overflow:hidden;
-    width:100%;
+    margin-right: 10px;
+    margin-left: 10px;
     postion:relative;
     font-family: 'Indie Flower', cursive;
+    margin-bottom: 50px;
+    opacity: 0.8px;
     
   }
   
@@ -188,15 +195,16 @@ body {
     background-size: cover;
      resize: both;
     overflow:hidden;
-    width:100%;
     postion:relative;
     font-family: 'Indie Flower', cursive;
     opacity: 0.9;
+    margin-right: 10px;
+    margin-left: 10px;
      }
   
   
   #section6 {text-align:center; margin-top:0px; margin-top:50px;margin-bottom:50px;height:500px;color: #fff;
-  background-image: url("../../../assets/images/gosocialbackimage2.png");
+  background-image: url("../../../assets/images/gosocialbackimage2.jpg");
 /* background-color: #cfced0; */
     min-height: 500px;
     background-attachment: fixed;
@@ -206,7 +214,8 @@ body {
     font-family: 'Indie Flower', cursive;
     resize: both;
     overflow:hidden;
-    width:100%;
+    margin-right: 10px;
+    margin-left: 10px;
     postion:relative;
     opacity: 1;
   }
@@ -221,7 +230,8 @@ body {
     font-family: 'Indie Flower', cursive;
 	resize: both;
     overflow:hidden;
-    width:100%;
+    margin-right: 10px;
+    margin-left: 10px;
     postion:relative;
     opacity: 0.8;
   }
@@ -314,6 +324,58 @@ h3 {
 	color: #0076BD;
 	font-size: 30px;
 	font-weight: inherit;
+}
+
+.textSec5Align {
+	float: center; 
+	display: inline-block; 
+	align-items: center; 
+	height: 100%;
+	margin: 0 auto !important; 	
+}
+@media screen and (max-width: 450px){
+.textSec5Align {
+	float: left; 
+	display: inline-block; 
+	align-items: center; 
+	height: 100%;
+	margin: 0 auto !important;	
+}	
+}
+
+.textSec5P {
+	font: 800 26px/1.9 'Shadows Into Light', sans-serif;
+}
+@media screen and (max-width:640px){
+.textSec5P {
+	font: 800 21px/1.9 'Shadows Into Light', sans-serif;
+}	
+}
+@media screen and (max-width:400px){
+.textSec5P {
+	font: 800 16px/1.9 'Shadows Into Light', sans-serif;
+}	
+}
+
+.textHomeGen {
+	text-align: center; 
+	font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;
+	background-color:#794c15;
+	margin-left: 10px;
+    margin-right: 10px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #7b863f;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #7b863f;
+    border-left-color: #7b863f;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-right-color: #7b863f;
+    border-right-width: 2px;
+    border-right-style: solid;
+    opacity:0.8;	
 }
 
 .section1Text:hover {
