@@ -23,7 +23,7 @@
 /*     text-decoration: underline; */
 /*   -webkit-text-decoration-color: red; safari still uses vendor prefix */
 /*   text-decoration-color: red; */
-  border-bottom: 5px solid #7b5201;
+  border-bottom: 5px solid #333;
    
 }
 .navbar-inverse .navbar-nav > .active > a,
@@ -204,7 +204,7 @@ body {
   
   
   #section6 {text-align:center; margin-top:0px; margin-top:50px;margin-bottom:50px;height:500px;color: #fff;
-  background-image: url("../../../assets/images/gosocialbackimage2.jpg");
+  background-image: url("../../../assets/images/gosocialbackimage3.jpg");
 /* background-color: #cfced0; */
     min-height: 500px;
     background-attachment: fixed;
@@ -360,19 +360,19 @@ h3 {
 .textHomeGen {
 	text-align: center; 
 	font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;
-	background-color:#794c15;
+	background-color:#333;
 	margin-left: 10px;
     margin-right: 10px;
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    border-bottom-color: #7b863f;
+    border-bottom-color: #333;
     border-top-width: 2px;
     border-top-style: solid;
-    border-top-color: #7b863f;
-    border-left-color: #7b863f;
+    border-top-color: #333;
+    border-left-color: #333;
     border-left-width: 2px;
     border-left-style: solid;
-    border-right-color: #7b863f;
+    border-right-color: #333;
     border-right-width: 2px;
     border-right-style: solid;
     opacity:0.8;	
@@ -795,19 +795,19 @@ Home Slider
 }
 
 .swiper-image-three {
-  background-image: url(https://source.unsplash.com/sFLVTqNzG2I/1600x900);
+  background-image: url("../../../assets/images/section2PicRight2.jpg");
 }
 
 .swiper-image-four {
-  background-image: url(https://source.unsplash.com/pj1jt4vBGZY/1600x900);
+  background-image: url("../../../assets/images/cover2.jpg");
 }
 
 .swiper-image-five {
-  background-image: url(https://source.unsplash.com/Jy6luiLBsrk/1600x900);
+  background-image: url("../../../assets/images/section2PicRight3.jpg");
 }
 
 .swiper-image-six {
-  background-image: url(https://source.unsplash.com/bxCgan0J1Sg/1600x900);
+  background-image: url("../../../assets/images/cover2.jpg");
 }
 
 .swiper-image {
