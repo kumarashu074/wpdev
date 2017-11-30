@@ -764,20 +764,27 @@
 			</div>
 			<div>
 				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li><a [routerLink]="['/contestList']" class="navbarLinks">CONTESTS</a></li>
-						<li><a [routerLink]="['/photoList']" class="navbarLinks">PHOTOS</a></li>
-						<li><a [routerLink]="['/vote']" class="navbarLinks">VOTE</a></li>
+					<ul class="nav navbar-nav"> 
+<!-- 					contestList -->
+						<li><a [routerLink]="['']" class="navbarLinks">CONTESTS</a></li>
+<!-- 						/photoList -->
+						<li><a [routerLink]="['']" class="navbarLinks">PHOTOS</a></li>
+<!-- 						vote -->
+						<li><a [routerLink]="['']" class="navbarLinks">VOTE</a></li>
 						<li class="dropup"><a class="dropup-toggle"
 							data-toggle="dropdown" href="#" class="navbarLinks">HOW <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a [routerLink]="['/support']" class="navbarLinks">IT WORKS</a></li>
-								<li><a [routerLink]="['/start']" class="navbarLinks">TO START</a></li>
+<!-- 							support -->
+								<li><a [routerLink]="['']" class="navbarLinks">IT WORKS</a></li>
+<!-- 								start -->
+								<li><a [routerLink]="['']" class="navbarLinks">TO START</a></li>
 							</ul></li>
 					</ul>
 					<ul class="nav navbar-nav pull-right">
-						<li><a [routerLink]="['/login']" class="navbarLinks">LOGIN</a></li>
-						<li><a [routerLink]="['/register']" class="navbarLinks">SIGN UP</a></li>
+<!-- 					login -->
+						<li><a [routerLink]="['']" class="navbarLinks">LOGIN</a></li>
+<!-- 						register -->
+						<li><a [routerLink]="['']" class="navbarLinks">SIGN UP</a></li>
 					</ul>
 				</div>
 			</div>
