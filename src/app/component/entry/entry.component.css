@@ -165,7 +165,23 @@ body {
 /*     opacity: 1; */
     
 	}
-  #section4 {text-align:center; margin-top:50px; padding-top:0px;height:450px;color: #fff; 
+	@media screen and (max-width:400px){
+	
+	 #section3 {text-align:center; margin-top:50px; padding-top:0px;height:800px;color: #fff; 
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     resize: both;
+    overflow:hidden;
+    margin-right: 10px;
+    margin-left: 10px;
+    postion:relative;
+    font-family: 'Indie Flower', cursive;
+	}
+	}
+  #section4 {text-align:center; margin-top:0px; padding-top:0px;height:450px;color: #fff; 
 /*   background-image: url("../../../assets/images/imgbg2.jpg"); */
     min-height: 350px;
     background-attachment: fixed;
