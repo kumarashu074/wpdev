@@ -404,7 +404,7 @@
 	<div id="section3">
 		<!-- class="container" class="container-fluid" -->
 		<!-- 		<p>{{appVar.slides[0].headlineFirstLine}}</p> -->
-		<div id="secvue" class="container container-fuild">
+		<div id="secvuePU" class="container container-fuild">
 			<div class="wrapper" v-cloak
 				v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
 				<div class="slide-wrapper" v-for="(slide, index) in slides"
@@ -469,26 +469,33 @@
 		<div class="container container-fuild">
 
 			<div class="table-responsive" style="margin-top: 50px">
-				<table class="table table-borderless" style="border: 0px">
+				<table id="sec4tab" class="table table-borderless" style="border: 0px">
 					<tbody>
 						<tr>
 							<td>
 								<div class="sec4imgdiv">
 									<img class="imgdivsec4"
 										src="assets/images/img1.jpg" />
+										
+									<div class="imgTextOversec4">
+										<p class="imgoverlaysec4P">
+											<br/><span class="sec4OverTextLabel"><b> 5 days 6 hours</b></span><br/> 
+											<br/><b>Emotions and Arts</b><br/><br/>
+											<span class="sec4OverTextLabel"><b>WITH restrictions</b></span>
+										</p>
+									</div>	
+										<button class="success">	
 									<div class="imgoverlaysec4">
 										<p class="imgoverlaysec4P">
-											200F<br /> 
-											500€ min. cash entry<br/>
-											1000€ Awards non cash<br/>
-											Top 10 winners <br/>
-											0.5€ entry <br/>
-											Juri <br/>
-
+											<span class="sec4OverTextLabel sotl">Photos: </span> <b>+20K</b><br/> 
+											<span class="sec4OverTextLabel sotl">Min. cash entry: </span><b>5k€</b><br/>
+											<span class="sec4OverTextLabel sotl">Awards non cash: </span><b>1K€</b><br/>
+											<span class="sec4OverTextLabel sotl">Top winners: </span> <b>100</b><br/>
+											<span class="sec4OverTextLabel sotl">Entry fee:  </span><b>1€</b><br/>
+											<span class="sec4OverTextLabel sotl">Juri:  </span> <b>YES</b><br/>
 										</p>
-										<button class="success">see
-											me inside!</button>
 									</div>
+									</button>
 								</div>
 							</td>
 							<td>
@@ -496,19 +503,26 @@
 							<div class="sec4imgdiv">
 									<img class="imgdivsec4"
 										src="assets/images/005.jpg" />
+									<div class="imgTextOversec4">
+										<p class="imgoverlaysec4P">
+											<br/><span class="sec4OverTextLabel"><b> 12 days 1 hour</b></span><br/> 
+											<br/><b>Travel and People</b><br/><br/>
+											<span class="sec4OverTextLabel"><b>NO restrictions</b></span>
+										</p>
+									</div>	
+									<button class="success">
 									<div class="imgoverlaysec4">
 										<p class="imgoverlaysec4P">
-											200F<br /> 
-											500€ min. cash entry<br/>
-											1000€ Awards non cash<br/>
-											Top 10 winners <br/>
-											0.5€ entry <br/>
-											Juri <br/>
+											<span class="sec4OverTextLabel sotl">Photos: </span> <b>+200</b><br/> 
+											<span class="sec4OverTextLabel sotl">Min. cash entry: </span><b>500€</b><br/>
+											<span class="sec4OverTextLabel sotl">Awards non cash: </span><b>250€</b><br/>
+											<span class="sec4OverTextLabel sotl">Top winners: </span> <b>5</b><br/>
+											<span class="sec4OverTextLabel sotl">Entry fee:  </span><b>0.5€</b><br/>
+											<span class="sec4OverTextLabel sotl">Juri:  </span> <b>YES</b><br/>
 
 										</p>
-										<button class="success">see
-											me inside!</button>
 									</div>
+									</button>
 								</div>
 								
 							</td>
@@ -517,20 +531,26 @@
 							<div class="sec4imgdiv">
 								<img class="imgdivsec4"
 										src="assets/images/006.jpg" />
-							
+							<div class="imgTextOversec4">
+										<p class="imgoverlaysec4P">
+											<br/><span class="sec4OverTextLabel"><b> 1 day </b></span><br/> 
+											<br/><b>Animals and Movement</b><br/><br/>
+											<span class="sec4OverTextLabel"><b>NO restrictions</b></span>
+										</p>
+									</div>	
+							<button class="success">
 									<div class="imgoverlaysec4">
 										<p class="imgoverlaysec4P">
-											200F<br /> 
-											500€ min. cash entry<br/>
-											1000€ Awards non cash<br/>
-											Top 10 winners <br/>
-											0.5€ entry <br/>
-											Juri <br/>
+											<span class="sec4OverTextLabel sotl">Photos: </span> <b>+1000</b><br/> 
+											<span class="sec4OverTextLabel sotl">WinPi points: </span><b>500</b><br/>
+											<span class="sec4OverTextLabel sotl">Awards non cash: </span><b>0€</b><br/>
+											<span class="sec4OverTextLabel sotl">Top winners: </span> <b>10</b><br/>
+											<span class="sec4OverTextLabel sotl">Entry fee:  </span><b>FREE</b><br/>
+											<span class="sec4OverTextLabel sotl">Juri:  </span> <b>NO</b><br/>
 
 										</p>
-										<button class="success">see
-											me inside!</button>
 									</div>
+									</button>
 								</div>
 								
 							</td>
@@ -539,19 +559,26 @@
 							<div class="sec4imgdiv">
 									<img class="imgdivsec4"
 										src="assets/images/007.jpg" />
+										<div class="imgTextOversec4">
+										<p class="imgoverlaysec4P">
+											<br/><span class="sec4OverTextLabel"><b> 1 day 1 hour</b></span><br/> 
+											<br/><b>Water</b><br/><br/>
+											<span class="sec4OverTextLabel"><b>WITH restrictions</b></span>
+										</p>
+									</div>	
+										<button class="success">
 									<div class="imgoverlaysec4">
 										<p class="imgoverlaysec4P">
-											200F<br /> 
-											500€ min. cash entry<br/>
-											1000€ Awards non cash<br/>
-											Top 10 winners <br/>
-											0.5€ entry <br/>
-											Juri <br/>
+											<span class="sec4OverTextLabel sotl">Photos: </span> <b>+20</b><br/> 
+											<span class="sec4OverTextLabel sotl">WinPi points: </span><b>2000</b><br/>
+											<span class="sec4OverTextLabel sotl">Awards non cash: </span><b>700€</b><br/>
+											<span class="sec4OverTextLabel sotl">Top winners: </span> <b>500</b><br/>
+											<span class="sec4OverTextLabel sotl">Entry fee:  </span><b>FREE</b><br/>
+											<span class="sec4OverTextLabel sotl">Juri:  </span> <b>YES</b><br/>
 
 										</p>
-										<button class="success">see
-											me inside!</button>
 									</div>
+									</button>
 								</div>
 								
 							</td>
@@ -559,19 +586,26 @@
 								<div class="sec4imgdiv">
 									<img class="imgdivsec4" 
 										src="assets/images/008.jpg" />
+										<div class="imgTextOversec4">
+										<p class="imgoverlaysec4P">
+											<br/><span class="sec4OverTextLabel"><b> less than 1 hour </b></span><br/> 
+											<br/><b>Sports and Cities</b><br/><br/>
+											<span class="sec4OverTextLabel"><b>WITH restrictions</b></span>
+										</p>
+									</div>	
+									<button class="success">
 									<div class="imgoverlaysec4">
 										<p class="imgoverlaysec4P">
-											200F<br /> 
-											500€ min. cash entry<br/>
-											1000€ Awards non cash<br/>
-											Top 10 winners <br/>
-											0.5€ entry <br/>
-											Juri <br/>
+											<span class="sec4OverTextLabel sotl">Photos: </span> <b>+10</b><br/> 
+											<span class="sec4OverTextLabel sotl">WinPi points: </span><b>50</b><br/>
+											<span class="sec4OverTextLabel sotl">Awards non cash: </span><b>100€</b><br/>
+											<span class="sec4OverTextLabel sotl">Top winners: </span> <b>3</b><br/>
+											<span class="sec4OverTextLabel sotl">Entry fee:  </span><b>FREE</b><br/>
+											<span class="sec4OverTextLabel sotl">Juri:  </span> <b>NO</b><br/>
 
 										</p>
-										<button class="success">see
-											me inside!</button>
 									</div>
+									</button>
 								</div>
 								</td>
 						</tr>
@@ -612,7 +646,7 @@
 	</div>
 
 	<div id="section6">
-		<h2 style="text-align: center; font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;color: white">
+		<h2 	style="text-align: center; font: 900 32px/1.9 'Gloria Hallelujah', sans-serif;color: white">
 				... Go <span class="emphasis">social</span> see what they say about us!
 			</h2>
 		

@@ -147,7 +147,7 @@ body {
     font-family: 'Indie Flower', cursive;
     opacity: 0.8;
 	}
-  #section3 {text-align:center; margin-top:50px; padding-top:0px;height:750px;color: #fff; 
+  #section3 {text-align:center; margin-top:50px; padding-top:0px;height:100%;color: #fff; 
 
 /* 	background-image: url("../../../assets/images/imgbg1.jpg"); */
 /* 	background-color:white; */
@@ -165,25 +165,9 @@ body {
 /*     opacity: 1; */
     
 	}
-	@media screen and (max-width:400px){
-	
-	 #section3 {text-align:center; margin-top:50px; padding-top:0px;height:800px;color: #fff; 
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-     resize: both;
-    overflow:hidden;
-    margin-right: 10px;
-    margin-left: 10px;
-    postion:relative;
-    font-family: 'Indie Flower', cursive;
-	}
-	}
-  #section4 {text-align:center; margin-top:0px; padding-top:0px;height:450px;color: #fff; 
+  #section4 {text-align:center; margin-top:0px; padding-top:0px;color: #fff; 
 /*   background-image: url("../../../assets/images/imgbg2.jpg"); */
-    min-height: 350px;
+    min-height: 450px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -560,7 +544,7 @@ General Styles for slider section#4
 	width: 290px;
 	height: 180px;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 740px) {
 
 .imgdivsec4{
 	max-width: 100%; 
@@ -568,20 +552,111 @@ General Styles for slider section#4
 	height: 140px;
 }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 560px) {
 
 .imgdivsec4{
 	max-width: 100%; 
-	width: 200px;
-	height: 90px;
+	width: -webkit-fill-available;
 }
 }
 
 .imgoverlaysec4P {
-	font-size: 18px; 
-	margin-top: 30px; 
+	font-size: 24px; 
 	text-align: center;
+	margin:0px;
+	top:0;
 }
+@media screen and (max-width:1600px){
+	.imgoverlaysec4P {
+	font-size: 22px; 
+}
+}
+
+@media screen and (max-width:1100px){
+	.imgoverlaysec4P {
+	font-size: 19px; 
+}
+}
+@media screen and (max-width:900px){
+	.imgoverlaysec4P {
+	font-size: 18px; 
+}
+}
+
+@media screen and (max-width:900px){
+	.imgoverlaysec4P {
+	font-size: 17px; 
+}
+}
+@media screen and (max-width:750px){
+	.imgoverlaysec4P {
+	font-size: 17px; 
+}
+}
+
+@media screen and (max-width:650px){
+	.imgoverlaysec4P {
+	font-size: 16px; 
+}
+}
+
+@media screen and (max-width:560px){
+	.imgoverlaysec4P {
+	font-size: 17px; 
+}
+}
+
+@media screen and (max-width:400px){
+	.imgoverlaysec4P {
+	font-size: 15px; 
+}
+}
+
+.sotl {
+	display:inline-block;
+}
+@media screen and (max-width:750px){
+	.sotl {
+	display:none;
+}
+}
+@media screen and (max-width:560px){
+	.sotl {
+	display:inline;
+}
+}
+
+
+
+.sec4OverTextLabel {
+	color:black;
+}
+
+.imgTextOversec4 {
+  align-items: center;
+  bottom: 0;
+  display: inline-block;
+  justify-content: center;
+  align:center;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.25s;
+  z-index: 1;
+  background-color: rgba(66,104,153,0.6);
+/*   background: linear-gradient(65deg, rgba(66,104,153,0.6), rgba(243,156,18,0.6)); */
+  color: #fafafa;
+  font-size: 20px;
+  border-radius: 0%;
+  width:inherit;
+}
+
+.sec4imgdiv:hover  .imgTextOversec4 {
+	display:none;	
+}
+
 
 .imgoverlaysec4 {
   align-items: center;
@@ -601,7 +676,7 @@ General Styles for slider section#4
   color: #fafafa;
   font-size: 20px;
   border-radius: 0%;
-  width:100%;
+  width:inherit;
 }
 
 .imgoverlaysec4:hover {
@@ -618,7 +693,7 @@ General Styles for slider section#4
   flex: 0 0 250px;
   justify-content: center;
   overflow: hidden;
-  position: relative;
+  position: relative;  
 }
 
  
