@@ -1,30 +1,4 @@
-$( document ).ready(function() {
-
-jQuery(document).ready(function() {
-	var offset = 250;
-	var duration = 300;
-
-	jQuery(window).scroll(function() {
-		if (jQuery(this).scrollTop() > offset) {
-			jQuery('.back-to-top').fadeIn(duration);
-		} else {
-			jQuery('.back-to-top').fadeOut(duration);
-		}
-	});
-
-
-	jQuery('.back-to-top').click(function(event) {
-		event.preventDefault();
-		jQuery('html, body').animate({scrollTop: 0}, duration);
-		return false;
-	});
-
-});
-
-
-
-
-	var appVue = new Vue({
+var appVue = new Vue({
 		el: '#secvue',
 		data: {
 			currentSlide: 0,
@@ -63,7 +37,7 @@ jQuery(document).ready(function() {
 		mounted: function () {
 			
 			console.log($('#secvue').is(':visible'));
-			if($('#secvue').is(':visible')) { //if the container is visible on the page
+//			if($('#secvue').is(':visible')) { //if the container is visible on the page
 				 
 			var productRotatorSlide = document.getElementById("secvue");
 			console.log('productRotatorSlide: '+productRotatorSlide);
@@ -84,7 +58,7 @@ jQuery(document).ready(function() {
 					this.currentSlide++;
 				}
 			}.bind(this));
-		}  
+//		}  
 		},
 		methods: {
 			updateSlide: function (index) {
@@ -95,6 +69,34 @@ jQuery(document).ready(function() {
 			}
 		}
 	});
+
+$( document ).ready(function() {
+
+jQuery(document).ready(function() {
+	var offset = 250;
+	var duration = 300;
+
+	jQuery(window).scroll(function() {
+		if (jQuery(this).scrollTop() > offset) {
+			jQuery('.back-to-top').fadeIn(duration);
+		} else {
+			jQuery('.back-to-top').fadeOut(duration);
+		}
+	});
+
+
+	jQuery('.back-to-top').click(function(event) {
+		event.preventDefault();
+		jQuery('html, body').animate({scrollTop: 0}, duration);
+		return false;
+	});
+
+});
+
+
+
+
+	
 
 
 var mySwiper = new Swiper(".swiper-container", {
