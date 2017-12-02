@@ -556,12 +556,12 @@ General Styles for slider section#4
 
 .imgdivsec4{
 	max-width: 100%; 
-	width: -webkit-fill-available;
+	width: 290px;
 }
 }
 
 .imgoverlaysec4P {
-	font-size: 24px; 
+	font-size: 22px; 
 	text-align: center;
 	margin:0px;
 	top:0;
@@ -689,7 +689,7 @@ General Styles for slider section#4
 }
 
 .sec4imgdiv {
-  display: flex;
+  display: inline-flex;
   flex: 0 0 250px;
   justify-content: center;
   overflow: hidden;

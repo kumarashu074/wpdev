@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 
 
 	var appVue = new Vue({
-		el: '#secvuePU',
+		el: '#secvue',
 		data: {
 			currentSlide: 0,
 			isPreviousSlide: false,

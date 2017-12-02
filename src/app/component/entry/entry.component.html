@@ -404,8 +404,8 @@
 	<div id="section3">
 		<!-- class="container" class="container-fluid" -->
 		<!-- 		<p>{{appVar.slides[0].headlineFirstLine}}</p> -->
-		<div id="secvuePU" class="container container-fuild">
-			<div class="wrapper" v-cloak
+		<div  class="container container-fuild">
+			<div id="secvue" class="wrapper" v-cloak
 				v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
 				<div class="slide-wrapper" v-for="(slide, index) in slides"
 					v-bind:class="{ active: index === currentSlide }"
@@ -479,7 +479,7 @@
 										
 									<div class="imgTextOversec4">
 										<p class="imgoverlaysec4P">
-											<br/><span class="sec4OverTextLabel"><b> 5 days 6 hours</b></span><br/> 
+											<span class="sec4OverTextLabel"><b> 5 days 6 hours</b></span><br/> 
 											<br/><b>Emotions and Arts</b><br/><br/>
 											<span class="sec4OverTextLabel"><b>WITH restrictions</b></span>
 										</p>
@@ -505,7 +505,7 @@
 										src="assets/images/005.jpg" />
 									<div class="imgTextOversec4">
 										<p class="imgoverlaysec4P">
-											<br/><span class="sec4OverTextLabel"><b> 12 days 1 hour</b></span><br/> 
+											<span class="sec4OverTextLabel"><b> 12 days 1 hour</b></span><br/> 
 											<br/><b>Travel and People</b><br/><br/>
 											<span class="sec4OverTextLabel"><b>NO restrictions</b></span>
 										</p>
@@ -533,7 +533,7 @@
 										src="assets/images/006.jpg" />
 							<div class="imgTextOversec4">
 										<p class="imgoverlaysec4P">
-											<br/><span class="sec4OverTextLabel"><b> 1 day </b></span><br/> 
+											<span class="sec4OverTextLabel"><b> 1 day </b></span><br/> 
 											<br/><b>Animals and Movement</b><br/><br/>
 											<span class="sec4OverTextLabel"><b>NO restrictions</b></span>
 										</p>
@@ -561,7 +561,7 @@
 										src="assets/images/007.jpg" />
 										<div class="imgTextOversec4">
 										<p class="imgoverlaysec4P">
-											<br/><span class="sec4OverTextLabel"><b> 1 day 1 hour</b></span><br/> 
+											<span class="sec4OverTextLabel"><b> 1 day 1 hour</b></span><br/> 
 											<br/><b>Water</b><br/><br/>
 											<span class="sec4OverTextLabel"><b>WITH restrictions</b></span>
 										</p>
@@ -588,7 +588,7 @@
 										src="assets/images/008.jpg" />
 										<div class="imgTextOversec4">
 										<p class="imgoverlaysec4P">
-											<br/><span class="sec4OverTextLabel"><b> less than 1 hour </b></span><br/> 
+											<span class="sec4OverTextLabel"><b> less than 1 hour </b></span><br/> 
 											<br/><b>Sports and Cities</b><br/><br/>
 											<span class="sec4OverTextLabel"><b>WITH restrictions</b></span>
 										</p>
@@ -596,12 +596,12 @@
 									<button class="success">
 									<div class="imgoverlaysec4">
 										<p class="imgoverlaysec4P">
-											<span class="sec4OverTextLabel sotl">Photos: </span> <b>+10</b><br/> 
-											<span class="sec4OverTextLabel sotl">WinPi points: </span><b>50</b><br/>
-											<span class="sec4OverTextLabel sotl">Awards non cash: </span><b>100€</b><br/>
-											<span class="sec4OverTextLabel sotl">Top winners: </span> <b>3</b><br/>
+											<span class="sec4OverTextLabel sotl">Photos: </span> <b>+300</b><br/> 
+											<span class="sec4OverTextLabel sotl">Prize money: </span><b>1.2K€</b><br/>
+											<span class="sec4OverTextLabel sotl">Awards non cash: </span><b>700€</b><br/>
+											<span class="sec4OverTextLabel sotl">Top winners: </span> <b>10</b><br/>
 											<span class="sec4OverTextLabel sotl">Entry fee:  </span><b>FREE</b><br/>
-											<span class="sec4OverTextLabel sotl">Juri:  </span> <b>NO</b><br/>
+											<span class="sec4OverTextLabel sotl">Juri:  </span> <b>YES</b><br/>
 
 										</p>
 									</div>
@@ -653,7 +653,7 @@
 		<div id="sec6Div" class="container" class="container-fluid">
 
 			<div class="container">
-				<div class="table-responsive" style="margin-left: 50px">
+				<div class="table-responsive" style="padding-top: 3%">
 					<table class="table table-borderless" style="border: 0px">
 						<tbody>
 							<tr>
@@ -815,9 +815,9 @@
 					</ul>
 					<ul class="nav navbar-nav pull-right">
 <!-- 					login -->
-						<li><a [routerLink]="['']" class="navbarLinks">LOGIN</a></li>
+						<li><a [routerLink]="['/login']" class="navbarLinks">LOGIN</a></li>
 <!-- 						register -->
-						<li><a [routerLink]="['']" class="navbarLinks">SIGN UP</a></li>
+						<li><a [routerLink]="['/signup']" class="navbarLinks">SIGN UP</a></li>
 					</ul>
 				</div>
 			</div>
