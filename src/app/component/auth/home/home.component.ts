@@ -1,6 +1,7 @@
 import { User } from '../../../models/user.model';
 import { UserService } from '../../../services/auth/user/user.service';
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../../app.component';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ export class HomeComponent implements OnInit {
     loading = false;
     uname: String;
 
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService, private appComponent: AppComponent) {
+        appComponent.loggedIn = true;
         const cUser = localStorage.getItem('currentUser');
         if (cUser) {
             this.currentUser = JSON.parse(cUser);
@@ -24,7 +26,7 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-       this.loadAllUsers();
+//       this.loadAllUsers();
     }
 
     deleteUser(id: number) {

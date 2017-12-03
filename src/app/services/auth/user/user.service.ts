@@ -57,7 +57,10 @@ export class UserService {
 
     public signup(user: User) {
       console.log(user);
-      return this.authService.signUp(user);
+      const obs: Observable <User> = this.authService.signUp(user);
+      console.log(obs);
+      return obs;
+
 //      const endPoint = UserService.SIGNUP_ENDPOINT;
 //        return this.http.post(endPoint, user)
 //          .map((response: Response) => response);

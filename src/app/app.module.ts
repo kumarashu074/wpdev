@@ -19,6 +19,7 @@ import { LoggerService } from './util/logger.service';
 import { UtilService } from './util/util.service';
 import { EntryComponent } from './component/entry/entry.component';
 import { AlertModule } from 'ngx-bootstrap';
+import { LogoutComponent } from './component/auth/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AlertModule } from 'ngx-bootstrap';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    EntryComponent
+    EntryComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

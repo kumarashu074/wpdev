@@ -13,7 +13,7 @@ import 'rxjs/add/operator/catch';
 
 import { environment } from '../../../environments/environment';
 import { User } from '../../models/user.model';
- //import { ApplicationError } from '../../util/applicationerror.service';
+ // import { ApplicationError } from '../../util/applicationerror.service';
 import { UtilService } from '../../util/util.service';
 import { error } from 'util';
 
@@ -56,7 +56,17 @@ export class AuthService {
   * @param password
   */
   public signUp(user: User): Observable<{}> {
+    // moke call to server
+    user.firstname = 'Bruno';
+    user.lastname = 'Lopes';
+    user.username = 'blopes';
+    user.id = 1;
+    user.role = 'admin';
+    this.saveUser(user);
+    this.saveUserDetails(JSON.parse(sessionStorage.getItem('user')));
 
+    return Observable.of(user);
+    /*Serve side call
     return this.http.post(AuthService.SIGNUP_URL, user, this.generateOptions())
       .map((res: Response) => {
         this.saveToken(res);
@@ -65,6 +75,7 @@ export class AuthService {
       }).catch(err => {
         return this.utilService.hanldeHttpError(err, 'user');
       });
+     */
   }
 
   /**
@@ -82,12 +93,17 @@ export class AuthService {
     const options = this.generateOptions();
 
     const body = JSON.stringify(requestParam);
+    
+    return Observable.of('token');
+    
+    /* call server side
     return this.http
         .post(AuthService.LOGIN_URL, body, options)
         .map(this.extractData)
         .catch(err => {
          return this.utilService.hanldeHttpError(err, 'user');
         });
+     */
 }
 
   /**
@@ -99,6 +115,7 @@ export class AuthService {
     this.token = null;
     this.username = null;
     this.userId = null;
+    localStorage.clear();
   }
 
   /**
@@ -156,6 +173,11 @@ export class AuthService {
     } else {
       throw Error(res.json());
     }
+  }
+
+  // Saves user details as moke to server call
+  private saveUser(user: User): void {
+      sessionStorage.setItem('user', JSON.stringify(user));
   }
 
   // Saves user details into service properties

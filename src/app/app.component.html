@@ -14,10 +14,9 @@
 <!--     </div> -->
 <!-- </div> -->
 <div>
-    <app-alert></app-alert>
     <router-outlet></router-outlet>
     
-	<nav class="navbar navbar-inverse" data-spy="affix">
+	<nav *ngIf="!loggedIn" class="navbar navbar-inverse affix" data-spy="affix">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -58,6 +57,76 @@
 			</div>
 		</div>
 	</nav>
+	
+		<nav *ngIf="loggedIn" class="navbar navbar-inverse affix" data-spy="affix">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#myNavbar">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#/entry"> <img alt=""
+						src="assets/images/winpilogo2.png"
+						style="width: 55px; height: 40px;    margin-top: -10px;">
+					</a>
+				</div>
+				<div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav"> 
+	<!-- 					contestList -->
+							<li><a [routerLink]="['']" class="navbarLinks">CONTESTS</a></li>
+	<!-- 						/photoList -->
+							<li><a [routerLink]="['']" class="navbarLinks">PHOTOS</a></li>
+	<!-- 						vote -->
+							<li><a [routerLink]="['']" class="navbarLinks">VOTE</a></li>
+							<li class="dropup"><a class="dropup-toggle"
+								data-toggle="dropdown" href="#" class="navbarLinks">HOW <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+	<!-- 							support -->
+									<li><a [routerLink]="['']" class="navbarLinks">IT WORKS</a></li>
+	<!-- 								start -->
+									<li><a [routerLink]="['']" class="navbarLinks">TO START</a></li>
+								</ul></li>
+						</ul>
+						<ul class="nav navbar-nav pull-right">
+							<li class="dropup"><a class="dropup-toggle"
+								data-toggle="dropdown" href="#" class="navbarLinks"> 
+								<img class="navbarNotif" alt="notifications" 
+							src="assets/images/navbarNotifIcon.png" 
+							onmouseover="hover(this,'assets/images/navbarNotifIconHover.png')"
+							onmouseout="hover(this,'assets/images/navbarNotifIcon.png')"
+							>
+								<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a [routerLink]="['']" class="navbarLinks"> +500 points</a></li>
+									<li><a [routerLink]="['']" class="navbarLinks">c:<b>all about you</b> </a></li>
+								</ul></li>
+							
+							<li class="dropup"><a class="dropup-toggle"
+								data-toggle="dropdown" href="#" class="navbarLinks"> 
+								<img class="navbarHome" alt="user home" 
+							src="assets/images/navbarHomeIcon.png" 
+							onmouseover="hover(this,'assets/images/navbarHomeIconHover.png')"
+							onmouseout="hover(this,'assets/images/navbarHomeIcon.png')">
+								<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a [routerLink]="['/logout']" class="navbarLinks">Log Off</a></li>
+									<li><a [routerLink]="['']" class="navbarLinks">My profile</a></li>
+									<li><a [routerLink]="['']" class="navbarLinks">My account</a></li>
+									<li><a [routerLink]="['']" class="navbarLinks">My photos</a></li>
+									<li><a [routerLink]="['']" class="navbarLinks">My contests</a></li>
+									<li><a [routerLink]="['']" class="navbarLinks">My trips</a></li>
+									<li><a [routerLink]="['']" class="navbarLinks">Settings</a></li>
+									<li><b>1200p Casual</b></li>
+								</ul></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+	
 </div>
 
 

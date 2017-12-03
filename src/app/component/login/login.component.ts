@@ -28,8 +28,7 @@ export class LoginComponent implements OnInit {
         this.authenticationService.logout();
 
         // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-        this.returnUrl = '';
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
     }
 
     login() {
@@ -38,11 +37,12 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 (token: any) => {
                    console.log('loading user with token:' + token);
-
-                   this.userService.getUserByToken(token).subscribe(
-                     (user: User) => {
-                        // store user details and jwt token in local storage to keep user logged in between page refreshes
+                   // moke call to server
+                      const user: User = new User(
+                        1, 'Bruno', 'Lopes', 'blopes', 'bruno.lourenco.lopes@gmail.com', 'admin');
                         localStorage.setItem('currentUser', JSON.stringify(user));
+                        console.log(this.returnUrl);
+                        console.log(this.route);
                         this.router.navigate([this.returnUrl], {relativeTo: this.route}).then(
                                 function(){
                                     console.log('navigate success');
@@ -51,8 +51,21 @@ export class LoginComponent implements OnInit {
                                     console.log('navigate failure');
                                 }
                               );
-                     }
-                   );
+
+//                   this.userService.getUserByToken(token).subscribe(
+//                     (user: User) => {
+//                        // store user details and jwt token in local storage to keep user logged in between page refreshes
+//                        localStorage.setItem('currentUser', JSON.stringify(user));
+//                        this.router.navigate([this.returnUrl], {relativeTo: this.route}).then(
+//                                function(){
+//                                    console.log('navigate success');
+//                                },
+//                                function(){
+//                                    console.log('navigate failure');
+//                                }
+//                              );
+//                     }
+//                   );
                 },
                 error => {
                     this.alertService.error(error);
