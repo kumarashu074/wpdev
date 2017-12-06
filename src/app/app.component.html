@@ -49,9 +49,9 @@
 					</ul>
 					<ul class="nav navbar-nav pull-right">
 <!-- 					login -->
-						<li><a [routerLink]="['/login']" class="navbarLinks">LOGIN</a></li>
+						<li><a [routerLink]="['login']" class="navbarLinks">LOGIN</a></li>
 <!-- 						register -->
-						<li><a [routerLink]="['/register']" class="navbarLinks">SIGN UP</a></li>
+						<li><a [routerLink]="['register']" class="navbarLinks">SIGN UP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -66,7 +66,7 @@
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#/entry"> <img alt=""
+					<a class="navbar-brand" href="entry"> <img alt=""
 						src="assets/images/winpilogo2.png"
 						style="width: 55px; height: 40px;    margin-top: -10px;">
 					</a>
@@ -111,7 +111,7 @@
 							onmouseout="hover(this,'assets/images/navbarHomeIcon.png')">
 								<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a [routerLink]="['/logout']" class="navbarLinks">Log Off</a></li>
+									<li><a [routerLink]="['logout']" class="navbarLinks">Log Off</a></li>
 									<li><a [routerLink]="['']" class="navbarLinks">My profile</a></li>
 									<li><a [routerLink]="['']" class="navbarLinks">My account</a></li>
 									<li><a [routerLink]="['']" class="navbarLinks">My photos</a></li>

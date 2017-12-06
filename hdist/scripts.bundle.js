@@ -60,7 +60,7 @@ jQuery(document).ready(function() {
 
  
 var appVue = new Vue({
-	el: '#secvue',
+	el: "#s_e_c_v_u_e_",
 	data: {
 		currentSlide: 0,
 		isPreviousSlide: false,
@@ -96,14 +96,6 @@ var appVue = new Vue({
 			]
 	},
 	mounted: function () {
-		
-		function updateSlide(index) {
-			console.log("move to other slide native");	
-			index < this.currentSlide ? this.isPreviousSlide = true : this.isPreviousSlide = false;
-			this.currentSlide = index;
-			this.isFirstLoad = false; 
-		};
-	
 //		console.log($('#secvue-1').is(':visible'));
 //		if($('#secvue-1').is(':visible')) { //if the container is visible on the page
 //			 
@@ -135,8 +127,10 @@ var appVue = new Vue({
 				this.currentSlide = index;
 				this.isFirstLoad = false; 
 			}
+	
 		}
 	});
+
 
 var mySwiper = new Swiper(".swiper-container", {
 	direction: "horizontal",
@@ -150,6 +144,7 @@ var mySwiper = new Swiper(".swiper-container", {
 	effect: "slide",
 	mousewheelControl: 1
 });
+
 
 function setIntervalX(callback, delay, repetitions) {
 	var x = 0;

@@ -19,4 +19,4 @@ const appRoutes: Routes = [
     { path: '**', component: AppComponent }
 ];
 
-    export const routing = RouterModule.forRoot(appRoutes, { useHash: false });
+    export const routing = RouterModule.forRoot(appRoutes, { useHash: true });
