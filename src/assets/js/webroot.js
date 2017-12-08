@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
 
  
 var appVue = new Vue({
-	el: "#s_e_c_v_u_e_",
+	el: "#s_e_c_v_u_e__",
 	data: {
 		currentSlide: 0,
 		isPreviousSlide: false,
@@ -34,7 +34,7 @@ var appVue = new Vue({
 				headlineSecondLine: "KIDS",
 				sublineFirstLine: "For Your",
 				sublineSecondLine: "KIDS",
-				sideMessage:"Let your kids enjoy the power of taking photos by playing around on our 4KIDS contests!",
+				sideMessage:"",
 				bgImg: "assets/images/kidsTakingPhoto.jpg",
 				rectImg: "assets/images/kidsTakingPhotoBack.jpg"
 			},
@@ -43,7 +43,7 @@ var appVue = new Vue({
 				headlineSecondLine: "GRANDS",
 				sublineFirstLine: "For The",
 				sublineSecondLine: "GRANDS",
-				sideMessage:"Let your older ones have a hobby and also having fun shooting, sharing their photos and finding their next trips!",
+				sideMessage:"",
 				bgImg: "assets/images/oldersTakingPhoto.jpg",
 				rectImg: "assets/images/oldersTakingPhotoBack.jpg"
 			},
@@ -52,7 +52,7 @@ var appVue = new Vue({
 				headlineSecondLine: "EVERYONE",
 				sublineFirstLine: "",
 				sublineSecondLine: "EVERYONE",
-				sideMessage:"Just to all of you! Enjoy and realize your dreams when it came to be memorable!",
+				sideMessage:"",
 				bgImg: "assets/images/everyoneTakingPhoto.jpg",
 				rectImg: "assets/images/everyoneTakingPhotoBack.jpg"
 			}
