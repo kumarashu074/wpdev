@@ -59,29 +59,29 @@ var appVue = new Vue({
 			]
 	},
 	mounted: function () {
-//		console.log($('#secvue-1').is(':visible'));
-//		if($('#secvue-1').is(':visible')) { //if the container is visible on the page
-//			 
-//		var productRotatorSlide = document.getElementById("'secvue-1'");
-//		console.log('productRotatorSlide: '+productRotatorSlide);
-//		var startX = 0;
-//		var endX = 0;
-//
-//		productRotatorSlide.addEventListener("touchstart", (event) => startX = event.touches[0].pageX);
-//
-//		productRotatorSlide.addEventListener("touchmove", (event) => endX = event.touches[0].pageX);
-//
-//		productRotatorSlide.addEventListener("touchend", function(event) {
-//			var threshold = startX - endX;
-//
-//			if (threshold < 150 && 0 < this.currentSlide) {
-//				this.currentSlide--;
-//			}
-//			if (threshold > -150 && this.currentSlide < this.slides.length - 1) {
-//				this.currentSlide++;
-//			}
-//		}.bind(this));
-//	}  
+		console.log($('#secvue-1').is(':visible'));
+		if($('#secvue-1').is(':visible')) { //if the container is visible on the page
+			 
+		var productRotatorSlide = document.getElementById("'secvue-1'");
+		console.log('productRotatorSlide: '+productRotatorSlide);
+		var startX = 0;
+		var endX = 0;
+
+		productRotatorSlide.addEventListener("touchstart", (event) => startX = event.touches[0].pageX);
+
+		productRotatorSlide.addEventListener("touchmove", (event) => endX = event.touches[0].pageX);
+
+		productRotatorSlide.addEventListener("touchend", function(event) {
+			var threshold = startX - endX;
+
+			if (threshold < 150 && 0 < this.currentSlide) {
+				this.currentSlide--;
+			}
+			if (threshold > -150 && this.currentSlide < this.slides.length - 1) {
+				this.currentSlide++;
+			}
+		}.bind(this));
+	}  
 	},
 		methods: {
 			updateSlide: function (index) {
