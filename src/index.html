@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <title>Webroot</title>
+  <base href="/">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  
+  <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Indie+Flower|Permanent+Marker|Satisfy|Shadows+Into+Light" rel="stylesheet"> 
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link href="assets/css/jqvmap.min.css" media="screen" rel="stylesheet" type="text/css"/>
+      
+  <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<!--   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+   
+</head>
+<body style="background:#F0F0F0;height:0px;" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <script src="assets/js/jssor.slider-26.3.0.min.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+  
+
+
+  setTimeout(function(){
+	  $('body').addClass('loaded');
+	}, 1000);
+
+  var initialWidthSize=0;
+  
+  $(document).ready(function() {
+	  initialWidthSize = $(window).width();
+	  
+  $('<script/>',{type:'text/javascript', src:'assets/js/jquery.vmap.js'}).appendTo('head');
+  $('<script/>',{type:'text/javascript', src:'assets/js/jquery.vmap.world.js'}).appendTo('head');
+  $('<script/>',{type:'text/javascript', src:'assets/js/jquery.vmap.sampledata.js'}).appendTo('head');
+  
+  
+  jQuery.fn.extend({
+		  
+		  testf: function(){
+	  		console.log('on testf');
+  		  }
+  });
+	$('#testModal').click(function(){
+	 	  $('#myModal').modal('show');
+	});
+		 
+	 
+	    jQuery('#vmap').vectorMap({
+        map: 'world_en',
+        backgroundColor: '#333333',
+        color: '#ffffff',
+        hoverOpacity: 0.7,
+        selectedColor: '#666666',
+        enableZoom: true,
+        showTooltip: true,
+        scaleColors: ['#C8EEFF', '#006491'],
+        values: sample_data,
+        normalizeFunction: 'polynomial'
+      });
+    
+	    if ($(window).width() <= 560) {
+	  	  $("#sec4tab").each(function() {
+	  	        var $this = $(this);
+	  	        var newrows = [];
+	  	        $this.find("tr").each(function(){
+	  	            var i = 0;
+	  	            $(this).find("td").each(function(){
+	  	                i++;
+	  	                if(newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
+	  	                newrows[i].append($(this));
+	  	            });
+	  	        });
+	  	        $this.find("tr").remove();
+	  	        $.each(newrows, function(){
+	  	            $this.append(this);
+	  	        });
+	  	    });
+	  	}
+	    
+  });
+  
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+	  //var section = document.querySelectorAll('div[class^="section"]');
+	  var section = document.querySelectorAll('div[class^="section1"]');
+	  
+	  section.style.backgroundImage="url(../../../assets/images/cover2.jpg)"; 
+	  
+  }
+  
+  $(window).resize(function () {
+	  var currentWidthSize = $(window).width();
+	  
+	  if((initialWidthSize>560 && currentWidthSize<=560)||
+			  (initialWidthSize<=560 && currentWidthSize>560)){
+		  initialWidthSize =currentWidthSize;
+		  
+	  $("#sec4tab").each(function() {
+		  console.log("on table sec4tab");
+	        var $this = $(this);
+	        var newrows = [];
+	        $this.find("tr").each(function(){
+	            var i = 0;
+	            $(this).find("td").each(function(){
+	                i++;
+	                if(newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
+	                newrows[i].append($(this));
+	            });
+	        });
+	        $this.find("tr").remove();
+	        $.each(newrows, function(){
+	            $this.append(this);
+	        });
+	    });
+	}
+  });
+  
+  function hover(element,newImg) {
+	    element.setAttribute('src', newImg);
+	}
+  
+  
+
+  
+  </script>
+  
+  <app-root>
+  </app-root>
+  <script>
+  
+	
+//   if ('serviceWorker' in navigator) {
+// 	  window.addEventListener('load', function() {
+// 	    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+// 	      // Registration was successful
+// 	      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+// 	    }, function(err) {
+// 	      // registration failed :(
+// 	      console.log('ServiceWorker registration failed: ', err);
+// 	    });
+// 	  });
+// 	}
+
+</script>
+
+<!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="assets/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.9/vue.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js" type="text/javascript"></script>
+  <script src="assets/js/webroot.js" type="text/javascript"></script>
+  
+  
+  
+</body>
+</html> 

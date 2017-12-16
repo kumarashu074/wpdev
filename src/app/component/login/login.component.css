@@ -1,0 +1,59 @@
+.loginDiv {
+  text-align:center; 
+  margin-left:0px; 
+  margin-top:0px;
+  margin-bottom:0px;
+  color: #fff;
+  background-image: url("../../../assets/images/loginBackMainDiv.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    -webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	font-family: 'Indie Flower', cursive;
+    resize: both;
+    overflow:hidden;
+    position:fixed;
+    opacity: 1;
+    height: 100%;  
+    width: 100%;
+  }
+ .form-group {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.btn-link:hover {
+	text-decoration: none;
+	opacity:0.8
+}
+
+h2 {
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 auto 0;
+  line-height: 2.1;
+  font-size: 2.7rem;
+  opacity: 1;
+}
+
+.btn-link {
+ font-size: 3rem;
+ opacity:0.8	;
+ color:aliceblue;
+}
+.btn-link:hover {
+ color:#3E8F3E;
+ opacity:1;
+}
+
+label {
+	font-size: 2rem;
+}
+
+.form-control{
+	font-size: 2rem;
+}
