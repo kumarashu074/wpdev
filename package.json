@@ -42,8 +42,13 @@
     "rxjs": "5.4.2",
     "vue-carousel-3d": "0.1.18",
     "zone.js": "0.8.14",
+<<<<<<< HEAD
     "typescript": "2.3.3"
   },
+=======
+    "typescript": "2.3.3"  
+},
+>>>>>>> 084df7e4ad64943ad9c38877d2a06031396dd734
   "devDependencies": {
     "@angular/language-service": "^4.4.6",
     "@types/jasmine": "~2.5.53",

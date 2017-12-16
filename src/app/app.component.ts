@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import '../assets/js/slider';
 
 declare var init_slider: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,5 +18,4 @@ export class AppComponent {
       init_slider();
     }, 1);
   }
-
 }
