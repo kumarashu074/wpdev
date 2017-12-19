@@ -13,7 +13,7 @@ import 'rxjs/add/operator/catch';
 
 import { environment } from '../../../environments/environment';
 import { User } from '../../models/user.model';
- // import { ApplicationError } from '../../util/applicationerror.service';
+// import { ApplicationError } from '../../util/applicationerror.service';
 import { UtilService } from '../../util/util.service';
 import { error } from 'util';
 
@@ -93,9 +93,9 @@ export class AuthService {
     const options = this.generateOptions();
 
     const body = JSON.stringify(requestParam);
-    
+
     return Observable.of('token');
-    
+
     /* call server side
     return this.http
         .post(AuthService.LOGIN_URL, body, options)
@@ -104,7 +104,7 @@ export class AuthService {
          return this.utilService.hanldeHttpError(err, 'user');
         });
      */
-}
+  }
 
   /**
   * Removes token and user details from sessionStorage and service's variables
@@ -127,7 +127,7 @@ export class AuthService {
 
     return this.http.post(AuthService.REFRESH_TOKEN_URL, requestParam, this.generateOptions())
       .map((res: Response) => {
-         this.saveToken(res);
+        this.saveToken(res);
       }).catch(err => {
         throw Error(err.json().message);
       });
@@ -177,7 +177,7 @@ export class AuthService {
 
   // Saves user details as moke to server call
   private saveUser(user: User): void {
-      sessionStorage.setItem('user', JSON.stringify(user));
+    sessionStorage.setItem('user', JSON.stringify(user));
   }
 
   // Saves user details into service properties
@@ -197,20 +197,20 @@ export class AuthService {
   // Generates Headers
   private generateOptions(): RequestOptions {
 
-    const headers = new Headers({'Content-Type': 'application/json'});
+    const headers = new Headers({ 'Content-Type': 'application/json' });
 
     return new RequestOptions({ headers: headers });
   }
 
-    private extractData(res: Response) {
-      const body = res.json();
-        if (body && body.token) {
+  private extractData(res: Response) {
+    const body = res.json();
+    if (body && body.token) {
 
-            return body.token;
-      }
-
-       return {};
-
+      return body.token;
     }
+
+    return {};
+
+  }
 
 }

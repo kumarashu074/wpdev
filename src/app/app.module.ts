@@ -42,8 +42,8 @@ import { LogoutComponent } from './component/auth/logout/logout.component';
   providers: [
     AuthService,
     GuardService,
-    AlertService,
-    UserService,
+    AlertService,
+    UserService,
     LoggerService,
     BaseRequestOptions,
     UtilService

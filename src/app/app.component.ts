@@ -12,9 +12,9 @@ export class AppComponent {
   title = 'webroot';
   public loggedIn: Boolean = false;
 
-  
+
   ngAfterViewInit() {
-    setTimeout(function() {
+    setTimeout(function () {
       init_slider();
     }, 1);
   }

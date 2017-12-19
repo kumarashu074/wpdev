@@ -7,16 +7,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class EntryComponent implements OnInit {
-//  public appVar: any;
+  public appVar: any;
   public slide: any;
   entry = '{background:black;}';
   public sections: string[] = [];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
-    const firstSection = '<div> <a herf="#"> link </a> </div>';
-    this.sections[0] = firstSection;
+    // const firstSection = '<div> <a herf="#"> link </a> </div>';
+    // this.sections[0] = firstSection;
   }
 
 }
