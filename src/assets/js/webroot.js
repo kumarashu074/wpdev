@@ -137,3 +137,115 @@ $(document).ready(function() {
 
     }, 1000);
 });
+
+setTimeout(function() {
+    $('body').addClass('loaded');
+}, 1000);
+
+var initialWidthSize = 0;
+
+$(document).ready(function() {
+    initialWidthSize = $(window).width();
+
+    $('<script/>', {
+        type: 'text/javascript',
+        src: 'assets/js/jquery.vmap.js'
+    }).appendTo('head');
+    $('<script/>', {
+        type: 'text/javascript',
+        src: 'assets/js/jquery.vmap.world.js'
+    }).appendTo('head');
+    $('<script/>', {
+        type: 'text/javascript',
+        src: 'assets/js/jquery.vmap.sampledata.js'
+    }).appendTo('head');
+
+
+    jQuery.fn.extend({
+
+        testf: function() {
+            console.log('on testf');
+        }
+    });
+    $('#testModal').click(function() {
+        $('#myModal').modal('show');
+    });
+
+
+    jQuery('#vmap').vectorMap({
+        map: 'world_en',
+        backgroundColor: '#333333',
+        color: '#ffffff',
+        hoverOpacity: 0.7,
+        selectedColor: '#666666',
+        enableZoom: true,
+        showTooltip: true,
+        scaleColors: ['#C8EEFF', '#006491'],
+        values: sample_data,
+        normalizeFunction: 'polynomial'
+    });
+
+    if ($(window).width() <= 560) {
+        $("#sec4tab").each(function() {
+            var $this = $(this);
+            var newrows = [];
+            $this.find("tr").each(function() {
+                var i = 0;
+                $(this).find("td").each(function() {
+                    i++;
+                    if (newrows[i] === undefined) {
+                        newrows[i] = $("<tr></tr>");
+                    }
+                    newrows[i].append($(this));
+                });
+            });
+            $this.find("tr").remove();
+            $.each(newrows, function() {
+                $this.append(this);
+            });
+        });
+    }
+
+});
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+    //var section = document.querySelectorAll('div[class^="section"]');
+    var section = document.querySelectorAll('div[class^="section1"]');
+
+    section.style.backgroundImage = "url(../../../assets/images/cover2.jpg)";
+
+}
+
+$(window).resize(function() {
+    var currentWidthSize = $(window).width();
+
+    if ((initialWidthSize > 560 && currentWidthSize <= 560) ||
+        (initialWidthSize <= 560 && currentWidthSize > 560)) {
+        initialWidthSize = currentWidthSize;
+
+        $("#sec4tab").each(function() {
+            console.log("on table sec4tab");
+            var $this = $(this);
+            var newrows = [];
+            $this.find("tr").each(function() {
+                var i = 0;
+                $(this).find("td").each(function() {
+                    i++;
+                    if (newrows[i] === undefined) {
+                        newrows[i] = $("<tr></tr>");
+                    }
+                    newrows[i].append($(this));
+                });
+            });
+            $this.find("tr").remove();
+            $.each(newrows, function() {
+                $this.append(this);
+            });
+        });
+    }
+});
+
+function hover(element, newImg) {
+    element.setAttribute('src', newImg);
+}
